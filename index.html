@@ -1,5 +1,4 @@
 <html>
-
 <head>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
 </head>
@@ -76,7 +75,7 @@
             position: initialLocation,
             anchorPoint: new google.maps.Point(0, -29)
         });
-
+        center = map.center;
         from_places.addListener('place_changed', function() {
             infowindow.close();
             var place = from_places.getPlace();
@@ -179,7 +178,6 @@
             });
 
         });
-
     }
     </script>
     <script src="https://maps.googleapis.com/maps/api/js?libraries=places&callback=initMap&key=AIzaSyD4QzjySSpzR8uURwC6TinNrylGlo7Us8g" async defer type="text/javascript"></script>
